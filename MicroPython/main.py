@@ -17,12 +17,12 @@ display.show(Image.HAPPY)
 # cookieNumber goes up by one on a button press.
 while True:
     if button_a.is_pressed():
-        display.clear()
         cookieNumber = cookieNumber + 1
+        display.clear()
         display.scroll(str(cookieNumber))
 
     # Reset cookieNumber on b button press.
-    if button_a.is_pressed():
-        display.clear()
+    if button_b.is_pressed():
         cookieNumber = 0
+        display.clear()
         display.scroll(str(cookieNumber))
