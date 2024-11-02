@@ -1,23 +1,28 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
-This module is a Micro:bit MicroPython program
+Created by: Caleb Andreas
+Created on: Nov 2024
+This module is a Micro:bit MicroPython program that is a cookie clicker.
 """
 
 from microbit import *
 
-# variables
+
+# Variables.
 cookieNumber = number = 0
+
+# Happy face at start.
+display.clear()
+display.show(Image.HAPPY)
 
 # cookieNumber goes up by one on a button press.
 while True:
     if button_a.is_pressed():
+        display.clear()
         cookieNumber = cookieNumber + 1
-        display.clear()
-        display.scroll(str(cokieNumber))
+        display.scroll(str(cookieNumber))
 
-# reset cookieNumber
+    # Reset cookieNumber on b button press.
     if button_a.is_pressed():
-        cookieNumber = 0
         display.clear()
-        display.scroll(str(cokieNumber))
+        cookieNumber = 0
+        display.scroll(str(cookieNumber))
